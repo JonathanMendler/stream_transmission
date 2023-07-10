@@ -18,7 +18,7 @@ Game.create(name: "Elden Ring", genre: "Action Role-Playing", player_support: "S
 
 Game.create(name: "Dead By Daylight", genre: "Asymmetrical Survival Horror", player_support: "Online Multi-Player", image_url: "https://m.media-amazon.com/images/I/81-wleSomEL._SX1200_._FMwebp_.jpg")
 
-Game.create(name: "Diablo IV", genre: "Action Role=Playing", player_support: "Online Single-Player, Online Multi-Player", image_url: "https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt6d7b0fd8453e72b9/646e720a71d9db111a265e8c/d4-open-graph_001.jpg")
+Game.create(name: "Diablo IV", genre: "Action Role-Playing", player_support: "Online Single-Player, Online Multi-Player", image_url: "https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt6d7b0fd8453e72b9/646e720a71d9db111a265e8c/d4-open-graph_001.jpg")
 
 UserStatistic.create(game_id: 1, user_id: 1, avg_viewers: 32, time_streamed: 109, followers_gained: 48)
 

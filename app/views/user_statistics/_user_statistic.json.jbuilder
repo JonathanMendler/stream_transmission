@@ -1,8 +1,8 @@
-json.id userstatistic.id
-json.game_id userstatistic.game_id
-json.user_id userstatistic.user_id
-json.avg_viewers userstatistic.avg_viewers
-json.time_streamed userstatistic.time_streamed
-json.followers_gained userstatistic.followers_gained
-json.created_at userstatistic.created_at
-json.updated_at userstatistic.updated_at
+json.id user_statistic.id
+json.game_id user_statistic.game_id
+json.user_id user_statistic.user_id
+json.avg_viewers user_statistic.avg_viewers
+json.time_streamed user_statistic.time_streamed
+json.followers_gained user_statistic.followers_gained
+json.created_at user_statistic.created_at
+json.updated_at user_statistic.updated_at
