@@ -1,0 +1,8 @@
+json.id userstatistic.id
+json.game_id userstatistic.game_id
+json.user_id userstatistic.user_id
+json.avg_viewers userstatistic.avg_viewers
+json.time_streamed userstatistic.time_streamed
+json.followers_gained userstatistic.followers_gained
+json.created_at userstatistic.created_at
+json.updated_at userstatistic.updated_at
