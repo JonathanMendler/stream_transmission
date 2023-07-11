@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get "/stats" => "stats#index"
   post "/stats" => "stats#create"
   patch "/stats/:id" => "stats#update"
+
+  post "/sessions" => "sessions#create"
+  
 end
