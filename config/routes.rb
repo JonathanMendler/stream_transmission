@@ -6,10 +6,11 @@ Rails.application.routes.draw do
 
   get "/users" => "users#index"
   post "/users" => "users#create"
+  get "/users/:id" => "users#show"
 
   get "/games" => "games#index"
   post "/games" => "games#create"
 
-  get "/user_statistics" => "user_statistics#index"
-  post "/user_statistics" => "user_statistics#create"
+  get "/stats" => "stats#index"
+  post "/stats" => "stats#create"
 end
