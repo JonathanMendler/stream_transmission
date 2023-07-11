@@ -19,4 +19,13 @@ class StatsControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
     end
   end
+
+  test "update" do
+    stat = Stat.first
+    patch "/stats/#{stat.id}.json", params: { avg_viewers: "Updated avg_viewers" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated avg_viewers", data["avg_viewers"]
+  end
 end

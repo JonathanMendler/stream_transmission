@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   get "/users" => "users#index"
   post "/users" => "users#create"
   get "/users/:id" => "users#show"
+  patch "/users/:id" => "users#update"
 
   get "/games" => "games#index"
   post "/games" => "games#create"
+  get "/games/:id" => "games#show"
+  patch "/games/:id" => "games#update"
 
   get "/stats" => "stats#index"
   post "/stats" => "stats#create"
+  patch "/stats/:id" => "stats#update"
 end

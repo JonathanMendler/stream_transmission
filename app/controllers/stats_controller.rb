@@ -14,4 +14,13 @@ class StatsController < ApplicationController
     )
     render :show
   end
+
+  def update
+    @stat = Stat.find_by(id: params[:id])
+    @stat.update(
+      avg_viewers: params[:avg_viewers],
+      time_streamed: params[:time_streamed],
+      followers_gained: params[:followers_gained],
+    )
+  end
 end
