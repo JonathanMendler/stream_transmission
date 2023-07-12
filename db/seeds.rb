@@ -20,6 +20,8 @@ Game.create(name: "Dead By Daylight", genre: "Asymmetrical Survival Horror", pla
 
 Game.create(name: "Diablo IV", genre: "Action Role-Playing", player_support: "Online Single-Player, Online Multi-Player", image_url: "https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt6d7b0fd8453e72b9/646e720a71d9db111a265e8c/d4-open-graph_001.jpg")
 
+Game.create(name: "The Oregon Trail", genre: "Adventure", player_support: "Single-Player", image_url: "https://www.heypoorplayer.com/wp-content/uploads/2022/12/oregontraillogo.jpg")
+
 Stat.create(user_id: 1, game_id: 1, avg_viewers: 32, time_streamed: 109, followers_gained: 48)
 
 Stat.create(user_id: 1, game_id: 2, avg_viewers: 23, time_streamed: 206, followers_gained: 119)
