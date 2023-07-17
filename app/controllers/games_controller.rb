@@ -1,21 +1,19 @@
 class GamesController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @games = Game.all
     render :index
   end
 
   def create
-    if current_user
-      @game = Game.create(
-        name: params[:name],
-        genre: params[:genre],
-        player_support: params[:player_support],
-        image_url: params[:image_url],
-      )
-      render :show
-    else
-      render json: [], status: :unauthorized
-    end
+    @game = Game.create(
+      name: params[:name],
+      genre: params[:genre],
+      player_support: params[:player_support],
+      image_url: params[:image_url],
+    )
+    render :show
   end
 
   def show
