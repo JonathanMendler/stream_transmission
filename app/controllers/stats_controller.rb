@@ -5,19 +5,23 @@ class StatsController < ApplicationController
   end
 
   def create
-    @stat = Stat.create(
-      user_id: current_user.id,
-      game_id: params[:game_id],
-      avg_viewers: params[:avg_viewers],
-      time_streamed: params[:time_streamed],
-      followers_gained: params[:followers_gained],
-      review: params[:review],
-    )
-    render :show
+    if current_user
+      @stat = Stat.create(
+        user_id: current_user.id,
+        game_id: params[:game_id],
+        avg_viewers: params[:avg_viewers],
+        time_streamed: params[:time_streamed],
+        followers_gained: params[:followers_gained],
+        review: params[:review],
+      )
+      render :show
+    else
+      render json: [], status: :unauthorized
+    end
   end
 
   def show
-    @stat = Stat.find_by(id: params[:id])
+    @stat = current_user.stats.find_by(id: params["id"])
     render :show
   end
 

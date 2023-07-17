@@ -5,13 +5,17 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.create(
-      name: params[:name],
-      genre: params[:genre],
-      player_support: params[:player_support],
-      image_url: params[:image_url],
-    )
-    render :show
+    if current_user
+      @game = Game.create(
+        name: params[:name],
+        genre: params[:genre],
+        player_support: params[:player_support],
+        image_url: params[:image_url],
+      )
+      render :show
+    else
+      render json: [], status: :unauthorized
+    end
   end
 
   def show
