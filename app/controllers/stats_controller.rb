@@ -6,12 +6,18 @@ class StatsController < ApplicationController
 
   def create
     @stat = Stat.create(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       game_id: params[:game_id],
       avg_viewers: params[:avg_viewers],
       time_streamed: params[:time_streamed],
       followers_gained: params[:followers_gained],
+      review: params[:review],
     )
+    render :show
+  end
+
+  def show
+    @stat = Stat.find_by(id: params[:id])
     render :show
   end
 
@@ -21,6 +27,8 @@ class StatsController < ApplicationController
       avg_viewers: params[:avg_viewers],
       time_streamed: params[:time_streamed],
       followers_gained: params[:followers_gained],
+      review: params[:review],
     )
+    render :show
   end
 end

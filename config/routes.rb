@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   patch "/games/:id" => "games#update"
   delete "/games/:id" => "games#destroy"
 
-  get "/stats" => "stats#index"
   post "/stats" => "stats#create"
+  get "/stats" => "stats#index"
+  get "/stats/:id" => "stats#show"
   patch "/stats/:id" => "stats#update"
 
   post "/sessions" => "sessions#create"
-  
 end

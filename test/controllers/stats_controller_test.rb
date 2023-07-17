@@ -15,7 +15,7 @@ class StatsControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Stat.count", 1 do
-      post "/stats.json", params: { user_id: 1, game_id: 1, avg_viewers: 10, time_streamed: 65, followers_gained: 5 }
+      post "/stats.json", params: { user_id: 1, game_id: 1, avg_viewers: 10, time_streamed: 65, followers_gained: 5, review: "Chickens everywhere!" }
       assert_response 200
     end
   end
