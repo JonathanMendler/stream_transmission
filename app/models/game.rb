@@ -1,3 +1,3 @@
 class Game < ApplicationRecord
-  has_many :stat
+  has_many :stats
 end

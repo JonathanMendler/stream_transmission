@@ -5,4 +5,4 @@ json.player_support game.player_support
 json.image_url game.image_url
 json.created_at game.created_at
 json.updated_at game.updated_at
-json.stat game.stat
+json.stats game.stats
